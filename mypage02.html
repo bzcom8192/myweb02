@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <style>
+        #test {
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body onkeydown="moveTextToCursor(event)">
+    <h1>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium, saepe!</h1>
+    <h2>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium, saepe!</h2>
+    <h3>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium, saepe!</h3>
+    <h4>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium, saepe!</h4>
+    <h5>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium, saepe!</h5>
+    <h6>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium, saepe!</h6>
+
+    Lorem ipsum dolor sit <span>amet consectetur</span> adipisicing elit. Sunt, quas?
+
+    <!-- <p id="test"></p> -->
+
+    <script>
+        function test() {
+            const text = "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium, saepe!";
+            const test = document.getElementById("test");
+            let i = 0;
+            const interval = setInterval(() => {
+                if (i < text.length) {
+                    test.innerHTML = test.innerHTML.replace("|", "");
+                    let cursor = i % 2 === 0 ? "|" : "";
+                    test.innerHTML += `${text.charAt(i)}${cursor}`;
+                    i++;
+                } else {
+                    // clearInterval(interval);
+                    i = 0;
+                    test.innerHTML = "";
+                }
+            }, 100);
+        }
+        function moveTextToCursor(e) {
+            console.log(e.key);
+            e.preventDefault();
+            const test = document.getElementById("test");
+            if (e.key === "ArrowRight") {
+                test.style.left = (parseInt(test.style.left || 0) + 10) + "px";
+            } else if (e.key === "ArrowLeft") {
+                test.style.left = (parseInt(test.style.left || 0) - 10) + "px";
+            } else if (e.key === "ArrowUp") {
+                test.style.top = (parseInt(test.style.top || 0) - 10) + "px";
+            } else if (e.key === "ArrowDown") {
+                test.style.top = (parseInt(test.style.top || 0) + 10) + "px";
+            }
+        }
+        window.onload = test;
+    </script>
+</body>
+
+</html>
