@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        @theme {
+            --color-clifford: #da373d;
+        }
+    </style>
+</head>
+
+<body
+    style="font-family: Arial, Helvetica, sans-serif; display: flex; flex-direction: column;"
+    class="py-4">
+    <form action="#" method="get" style="display: flex; flex-direction: column; gap: 10px; max-width: 450px; margin: auto;">
+        <div style="display: flex; justify-content: space-between;">
+            <label for="name">ป้อนชื่อ</label>
+            <input type="text" name="name" id="name" placeholder="ชื่อของคุณ" />
+        </div>
+        <div style="display: flex; justify-content: space-between;">
+            <label for="age">ป้อนอายุ</label>
+            <input type="number" name="age" id="age" placeholder="อายุของคุณ" />
+        </div>
+        <div style="display: flex; justify-content: space-between;">
+            <label for="phone">ป้อนเบอร์โทร</label>
+            <input type="tel" name="phone" id="phone" placeholder="เบอร์โทรของคุณ" />
+        </div>
+        <div style="display: flex; justify-content: space-between;">
+            <label for="email">ป้อนอีเมล</label>
+            <input type="email" name="email" id="email" placeholder="อีเมลของคุณ" />
+        </div>
+        <div style="display: flex; justify-content: space-between;">
+            <label for="password">ป้อนรหัสผ่าน</label>
+            <input type="password" name="password" id="password" placeholder="รหัสผ่านของคุณ" />
+        </div>
+        <div style="display: flex; justify-content: space-between;">
+            <label for="datetime1">วัน-เวลา ตกฟาก</label>
+            <input type="datetime-local" name="datetime1" id="datetime1" />
+        </div>
+        <div style="display: flex; justify-content: space-between;">
+            <label for="date1">วันเปิดเทอม</label>
+            <input type="date" name="date1" id="date1" />
+        </div>
+        <div style="display: flex; justify-content: space-between;">
+            <label for="time1">เวลาเลิกงาน</label>
+            <input type="time" name="time1" id="time1" />
+        </div>
+        <div style="display: flex; justify-content: space-between;">
+            <label for="gender">เพศ</label>
+            <span style="display: flex; align-items: center; gap: 5px">
+                <input type="radio" name="gender" id="gender-male" checked value="0" />
+                <label for="gender-male">ชาย</label>
+                <input type="radio" name="gender" id="gender-female" value="1" />
+                <label for="gender-female">หญิง</label>
+                <input type="radio" name="gender" id="gender-lgbtq" value="2" />
+                <label for="gender-lgbtq">LGBTQ+</label>
+            </span>
+        </div>
+        <div style="display: flex; justify-content: space-between;">
+            <label for="province">จังหวัด</label>
+            <select name="province" id="province">
+                <option value="0">กรุงเทพมหานคร</option>
+                <option value="1">นนทบุรี</option>
+                <option value="2">ปทุมธานี</option>
+                <option value="3">สมุทรปราการ</option>
+                <option value="4">สมุทรสาคร</option>
+                <option value="5">นครปฐม</option>
+                <option value="6">พระนครศรีอยุธยา</option>
+                <option value="7">ลพบุรี</option>
+                <option value="8">สระบุรี</option>
+                <option value="9">ชลบุรี</option>
+                <option value="10">ระยอง</option>
+                <option value="11">จันทบุรี</option>
+                <option value="12">ตราด</option>
+                <option value="13">ฉะเชิงเทรา</option>
+                <option value="14">ปราจีนบุรี</option>
+                <option value="15">นครนายก</option>
+                <option value="16">สระแก้ว</option>
+                <option value="17">กาญจนบุรี</option>
+                <option value="18">ตาก</option>
+                <option value="19">สุพรรณบุรี</option>
+                <option value="20">ราชบุรี</option>
+                <option value="21">นครปฐม</option>
+                <option value="22">สมุทรสงคราม</option>
+                <option value="23">เพชรบุรี</option>
+                <option value="24">ประจวบคีรีขันธ์</option>
+            </select>
+        </div>
+        <div style="display: flex; justify-content: space-between;">
+            <label for="province">จังหวัด</label>
+            <select name="province" id="province" size="3">
+                <option value="0">กรุงเทพมหานคร</option>
+                <option value="1">นนทบุรี</option>
+                <option value="2">ปทุมธานี</option>
+                <option value="3">สมุทรปราการ</option>
+                <option value="4">สมุทรสาคร</option>
+                <option value="5">นครปฐม</option>
+                <option value="6">พระนครศรีอยุธยา</option>
+                <option value="7">ลพบุรี</option>
+                <option value="8">สระบุรี</option>
+                <option value="9">ชลบุรี</option>
+                <option value="10">ระยอง</option>
+                <option value="11">จันทบุรี</option>
+                <option value="12">ตราด</option>
+                <option value="13">ฉะเชิงเทรา</option>
+                <option value="14">ปราจีนบุรี</option>
+                <option value="15">นครนายก</option>
+                <option value="16">สระแก้ว</option>
+                <option value="17">กาญจนบุรี</option>
+                <option value="18">ตาก</option>
+                <option value="19">สุพรรณบุรี</option>
+                <option value="20">ราชบุรี</option>
+                <option value="21">นครปฐม</option>
+                <option value="22">สมุทรสงคราม</option>
+                <option value="23">เพชรบุรี</option>
+                <option value="24">ประจวบคีรีขันธ์</option>
+            </select>
+        </div>
+        <div style="display: flex; justify-content: space-between;">
+            <label for="foods">อาหารที่ชอบ</label>
+            <span class="flex flex-col">
+                <input type="checkbox" name="foods" class="w-full" id="">
+                <label for="">ข้าวผัด</label>
+                <input type="checkbox" name="foods" class="w-full" id="">
+                <label for="">ข้าวมันไก่</label>
+                <input type="checkbox" name="foods" class="w-full" id="">
+                <label for="">ข้าวขาหมู</label>
+                <input type="checkbox" name="foods" class="w-full" id="">
+                <label for="">ข้าวหมูแดง</label>
+                <input type="checkbox" name="foods" class="w-full" id="">
+                <label for="">ข้าวหมูกรอบ</label>
+                <input type="checkbox" name="foods" class="w-full" id="">
+                <label for="">ข้าวหน้าเป็ด</label>
+            </span>
+        </div>
+        <button onclick="alert('Hello World')" class="text-white bg-blue-500 p-2 rounded hover:bg-blue-600 hover:cursor-pointer">Click meeeeeeeee</button>
+        <input type="submit" value="ดำเนินการต่อ" class="text-white bg-green-500 p-2 rounded hover:bg-green-600 hover:cursor-pointer" />
+        <input type="reset" value="ล้างข้อมูล" class="text-white bg-red-500 p-2 rounded hover:bg-red-600 hover:cursor-pointer" />
+    </form>
+</body>
+
+</html>
